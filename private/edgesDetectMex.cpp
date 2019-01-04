@@ -84,9 +84,9 @@ void mexFunction( int nl, mxArray *pl[], int nr, const mxArray *pr[] )
   const int w2 = w1*stride+gtWidth;
   const int imgDims[3] = {h,w,Z};
   const int chnDims[3] = {h/shrink,w/shrink,nChns};
-  const int indDims[3] = {h1,w1,nTreesEval};
-  const int outDims[3] = {h2,w2,1};
-  const int segDims[5] = {gtWidth,gtWidth,h1,w1,nTreesEval};
+  const mwSize indDims[3] = {h1,w1,nTreesEval};
+  const mwSize outDims[3] = {h2,w2,1};
+  const mwSize segDims[5] = {gtWidth,gtWidth,h1,w1,nTreesEval};
 
   // construct lookup tables
   uint32 *iids, *eids, *cids, *cids1, *cids2;
